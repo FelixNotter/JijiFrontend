@@ -40,7 +40,7 @@ function positionContainer() {
   console.log(scrollTop)
 }
 document.addEventListener('DOMContentLoaded', function () {
-  fetch('https://jijiapibackend-1.onrender.com/jiji/products/', {
+  fetch('https://jijiapibackend.onrender.com/jiji/products/', {
     method: 'GET',
   })
     .then(response => {
@@ -159,7 +159,7 @@ function categoryStore(id) {
 function categoryFilter(categoryId) {
   const catId = categoryId;
   console.log(catId)
-  fetch(`https://jijiapibackend-1.onrender.com/jiji/products/?category_id=${categoryId}`, {
+  fetch(`https://jijiapibackend.onrender.com/jiji/?category_id=${categoryId}`, {
     method: 'GET',
   })
     .then(response => {
@@ -190,7 +190,7 @@ function rangeFilter() {
     alert("The max range  should be greater than the min range")
     return
   }
-  fetch(`https://jijiapibackend-1.onrender.com/jiji/products/?&min_price=${minRange}&max_price=${maxRange}`, {
+  fetch(`https://jijiapibackend.onrender.com/jiji/products/?&min_price=${minRange}&max_price=${maxRange}`, {
     method: 'GET',
   })
     .then(response => {
@@ -217,7 +217,7 @@ function regionStore(id) {
   regionFilter(id)
 }
 function regionFilter(regionId) {
-  fetch(`https://jijiapibackend-1.onrender.com/jiji/products/?category_id=${regionId}`, {
+  fetch(`https://jijiapibackend.onrender.com/jiji/products/?category_id=${regionId}`, {
     method: 'GET',
   })
     .then(response => {
@@ -240,7 +240,7 @@ function regionFilter(regionId) {
 function addToCart(cartId) {
   const cartItem = cartId;
   console.log(cartItem)
-  fetch('https://jijiapibackend-1.onrender.com/jiji/cart/', {
+  fetch('https://jijiapibackend.onrender.com/jiji/cart/', {
     method: 'POST',
     headers: {
       'content-Type': 'application/json'

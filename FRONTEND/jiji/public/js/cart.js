@@ -2,7 +2,7 @@ document.addEventListener('DOMContentLoaded', function() {
  
 
     // alert("fetching")
-    fetch('https://jiji-twg0.onrender.com/jiji/carts/', {
+    fetch('https://jijiapibackend.onrender.com/jiji/cart/', {
         method: 'GET',
        
     })
@@ -100,7 +100,7 @@ function updateCartHome(data){
 
     alert("Item  will be removed from cart");
 
-    fetch(`https://jiji-twg0.onrender.com/jiji/carts/${id}/`, {
+    fetch(`https://jijiapibackend.onrender.com/jiji/cart/${id}/`, {
         method: 'DELETE',
        
     })
@@ -149,7 +149,7 @@ function updateCartHome(data){
         return
     }
  
-    fetch(`https://jiji-twg0.onrender.com/jiji/carts/${item}/`,{
+    fetch(`https://jijiapibackend.onrender.com/jiji/cart/${item}/`,{
         method: 'PATCH',
         headers:{
           'content-Type':'application/json'
